@@ -5,7 +5,7 @@
 - Nome do Projeto: Plato (Antigo).
 - Autoria: Própria.
 - Proposito: Projeto crud para disciplina de laboratório de engenharia de software (Fatec).
-- Progresso: Parcialmente completo.
+- Progresso: Parcialmente completo, não responsivo para mobile.
 - Tecnologias utilizadas: HTML, CSS, JavaScript, NodeJS, Typescript, ExpressJS, MustacheJS, SQL Server e Sequelize.
 - Requisitos: NodeJS, TypeScript e Sql Server.
 - Adendos: Projeto super simples, sem intuito de ser profissional, feito apenas para prática dos recursos das tecnologias acima.
