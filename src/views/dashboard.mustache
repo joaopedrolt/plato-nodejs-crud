@@ -1,0 +1,304 @@
+{{>partials/menu}}
+        <section class="section">
+            {{#erroBlank}}
+                <div class="erro display">Preencha todos os Campos!</div>
+            {{/erroBlank}}
+            {{#addedAlert}}
+                <div class="done display">Cadastrado com sucesso!</div>
+                <script src="/public/js/doneAlert.js"></script>
+            {{/addedAlert}}
+            <div class="section-area">   
+                <div class="section-header">
+                    <div class="logo-header"></div>
+                    <h1 class="title-header">Funcionários</h1>
+                </div>
+                <div class="table-area">
+                    <div class="table">
+                        <div class="table-columns">
+                            <div class="corner"></div>
+                            <div class="columns-title id">id</div>
+                            <div class="columns-title">nome</div>
+                            <div class="columns-title">username</div>
+                            <div class="columns-title">password</div>
+                            <div class="columns-title">accesslevel</div>
+                            <div class="corner"></div>
+                        </div>
+                        <ul>
+                            {{#funcionarios}}
+                                <li>
+                                    <div class="table-rows">
+                                        <form method="post">
+                                            <input type="text" class="input-ghost" name="pkfuncionario" value="{{id}}"/>
+                                            <button type="submit" class="erase">
+                                                <svg viewBox="0 0 30 30" width="20px" height="20px">
+                                                    <path d="M6 8v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8H6zM24 4h-6c0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1H6C5.4 4 5 4.4 5 5s.4 1 1 1h18c.6 0 1-.4 1-1S24.6 4 24 4z"/>
+                                                </svg>
+                                            </button>
+                                        </form>
+                                        <div class="row-info id">{{id}}</div>
+                                        <div class="row-info name">{{nome}}</div>
+                                        <div class="row-info">{{username}}</div>
+                                        <div class="row-info">{{password}}</div>
+                                        <div class="row-info">{{accesslevel}}</div>
+                                        <div class="edit">
+                                            <svg viewBox="0 0 30 30" width="20px" height="20px"> 
+                                                <path d="M 22.828125 3 C 22.316375 3 21.804562 3.1954375 21.414062 3.5859375 L 19 6 L 24 11 L 26.414062 8.5859375 C 27.195062 7.8049375 27.195062 6.5388125 26.414062 5.7578125 L 24.242188 3.5859375 C 23.851688 3.1954375 23.339875 3 22.828125 3 z M 17 8 L 5.2597656 19.740234 C 5.2597656 19.740234 6.1775313 19.658 6.5195312 20 C 6.8615312 20.342 6.58 22.58 7 23 C 7.42 23.42 9.6438906 23.124359 9.9628906 23.443359 C 10.281891 23.762359 10.259766 24.740234 10.259766 24.740234 L 22 13 L 17 8 z M 4 23 L 3.0566406 25.671875 A 1 1 0 0 0 3 26 A 1 1 0 0 0 4 27 A 1 1 0 0 0 4.328125 26.943359 A 1 1 0 0 0 4.3378906 26.939453 L 4.3632812 26.931641 A 1 1 0 0 0 4.3691406 26.927734 L 7 26 L 5.5 24.5 L 4 23 z"/>
+                                            </svg>
+                                        </div>
+                                     </div>
+                                </li>
+                            {{/funcionarios}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="button-add">Add</div>
+            </div>
+            <div class="section-area">   
+                <div class="section-header">
+                    <div class="logo-header"></div>
+                    <h1 class="title-header">Clientes</h1>
+                </div>
+                <div class="table-area">
+                    <div class="table">
+                        <div class="table-columns">
+                            <div class="corner"></div>
+                            <div class="columns-title id">id</div>
+                            <div class="columns-title">nome</div>
+                            <div class="columns-title">cnpj</div>
+                            <div class="columns-title">cep</div>
+                            <div class="columns-title">logradouro</div>
+                            <div class="columns-title">setor</div>
+                            <div class="columns-title">número</div>
+                            <div class="columns-title">email</div>
+                            <div class="corner"></div>
+                        </div>
+                        <ul>
+                            {{#clientes}}
+                                <li>
+                                    <div class="table-rows clients">
+                                        <form method="post">
+                                            <input type="text" class="input-ghost" name="pkclientes" value="{{id}}"/>
+                                            <button type="submit" class="erase">
+                                                <svg viewBox="0 0 30 30" width="20px" height="20px">
+                                                    <path d="M6 8v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8H6zM24 4h-6c0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1H6C5.4 4 5 4.4 5 5s.4 1 1 1h18c.6 0 1-.4 1-1S24.6 4 24 4z"/>
+                                                </svg>
+                                            </button>
+                                        </form>
+                                        <div class="row-info id">{{id}}</div>
+                                        <div class="row-info">{{nome}}</div>
+                                        <div class="row-info">{{cnpj}}</div>
+                                        <div class="row-info">{{cep}}</div>
+                                        <div class="row-info">{{logradouro}}</div>
+                                        <div class="row-info">{{setor}}</div>
+                                        <div class="row-info">{{numero}}</div>
+                                        <div class="row-info">{{email}}</div>
+                                        <div class="edit">
+                                            <svg viewBox="0 0 30 30" width="20px" height="20px"> 
+                                                <path d="M 22.828125 3 C 22.316375 3 21.804562 3.1954375 21.414062 3.5859375 L 19 6 L 24 11 L 26.414062 8.5859375 C 27.195062 7.8049375 27.195062 6.5388125 26.414062 5.7578125 L 24.242188 3.5859375 C 23.851688 3.1954375 23.339875 3 22.828125 3 z M 17 8 L 5.2597656 19.740234 C 5.2597656 19.740234 6.1775313 19.658 6.5195312 20 C 6.8615312 20.342 6.58 22.58 7 23 C 7.42 23.42 9.6438906 23.124359 9.9628906 23.443359 C 10.281891 23.762359 10.259766 24.740234 10.259766 24.740234 L 22 13 L 17 8 z M 4 23 L 3.0566406 25.671875 A 1 1 0 0 0 3 26 A 1 1 0 0 0 4 27 A 1 1 0 0 0 4.328125 26.943359 A 1 1 0 0 0 4.3378906 26.939453 L 4.3632812 26.931641 A 1 1 0 0 0 4.3691406 26.927734 L 7 26 L 5.5 24.5 L 4 23 z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </li>
+                            {{/clientes}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="button-add">Add</div>
+            </div>
+            <div class="section-area">   
+                <div class="section-header">
+                    <div class="logo-header"></div>
+                    <h1 class="title-header">Pedidos</h1>
+                </div>
+                <div class="table-area pedidos">
+                    <div class="table">
+                        <div class="table-columns">
+                            <div class="corner"></div>
+                            <div class="columns-title id">id</div>
+                            <div class="columns-title">origem</div>
+                            <div class="columns-title">destino</div>
+                            <div class="columns-title">carregamento</div>
+                            <div class="columns-title">cliente</div>
+                            <div class="columns-title">motorista</div>
+                            <div class="columns-title">status</div>
+                            <div class="corner"></div>
+                        </div>
+                        <ul>
+                            {{#pedidos}}
+                                <li>
+                                    <div class="table-rows">
+                                        <form method="post">
+                                            <input type="text" class="input-ghost" name="pkpedido" value="{{id}}"/>
+                                            <button type="submit" class="erase">
+                                                <svg viewBox="0 0 30 30" width="20px" height="20px">
+                                                    <path d="M6 8v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8H6zM24 4h-6c0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1H6C5.4 4 5 4.4 5 5s.4 1 1 1h18c.6 0 1-.4 1-1S24.6 4 24 4z"/>
+                                                </svg>
+                                            </button>
+                                        </form>
+                                        <div class="row-info id">{{id}}</div>
+                                        <div class="row-info name">{{origem}}</div>
+                                        <div class="row-info">{{destino}}</div>
+                                        <div class="row-info">{{carregamento}}</div>
+                                        <div class="row-info">{{cliente}}</div>
+                                        <div class="row-info">{{motorista}}</div>
+                                        <div class="row-info">{{status}}</div>
+                                        <div class="edit">
+                                            <svg viewBox="0 0 30 30" width="20px" height="20px"> 
+                                                <path d="M 22.828125 3 C 22.316375 3 21.804562 3.1954375 21.414062 3.5859375 L 19 6 L 24 11 L 26.414062 8.5859375 C 27.195062 7.8049375 27.195062 6.5388125 26.414062 5.7578125 L 24.242188 3.5859375 C 23.851688 3.1954375 23.339875 3 22.828125 3 z M 17 8 L 5.2597656 19.740234 C 5.2597656 19.740234 6.1775313 19.658 6.5195312 20 C 6.8615312 20.342 6.58 22.58 7 23 C 7.42 23.42 9.6438906 23.124359 9.9628906 23.443359 C 10.281891 23.762359 10.259766 24.740234 10.259766 24.740234 L 22 13 L 17 8 z M 4 23 L 3.0566406 25.671875 A 1 1 0 0 0 3 26 A 1 1 0 0 0 4 27 A 1 1 0 0 0 4.328125 26.943359 A 1 1 0 0 0 4.3378906 26.939453 L 4.3632812 26.931641 A 1 1 0 0 0 4.3691406 26.927734 L 7 26 L 5.5 24.5 L 4 23 z"/>
+                                            </svg>
+                                        </div>
+                                     </div>
+                                </li>
+                            {{/pedidos}}
+                        </ul>
+                    </div>
+                </div>
+                {{#showGestor}}
+                    <div class="button-add">Add</div>
+                {{/showGestor}}
+                {{#showEstoque}}
+                    <div class="button-add">Add</div>
+                {{/showEstoque}}
+            </div>
+            <div class="section-area">   
+                <div class="section-header">
+                    <div class="logo-header"></div>
+                    <h1 class="title-header">Adicionar - Funcionário</h1>
+                </div>
+                <div class="add-area">
+                    <form class="add-form" method="post">
+                        <input type="text" name="nome" placeholder="Nome"/>
+                        <input type="text" name="username" placeholder="Usuario" maxlength="16"/>
+                        <input type="text" name="password" placeholder="Senha"/>
+                        <select name="accesslevel" id="accesslevel">
+                            <option value=1>Admin</option>
+                            <option value=2>G.Vendas</option>
+                            <option value=3>Motorista</option>
+                        </select>
+                        <button class="button-add" type="submit">Adicionar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="section-area">   
+                <div class="section-header">
+                    <div class="logo-header"></div>
+                    <h1 class="title-header">Garagem</h1>
+                </div>
+                <div class="table-area">
+                    <div class="table">
+                        <div class="table-columns">
+                            <div class="corner"></div>
+                            <div class="columns-title id">placa</div>
+                            <div class="columns-title">modelo</div>
+                            <div class="columns-title">capacidade</div>
+                            <div class="columns-title">status</div>
+                            <div class="corner"></div>
+                        </div>
+                        <ul>
+                            {{#garagem}}
+                                <li>
+                                    <div class="table-rows clients">
+                                        <form method="post">
+                                            <input type="text" class="input-ghost" name="pkplaca" value="{{placa}}"/>
+                                            <button type="submit" class="erase">
+                                                <svg viewBox="0 0 30 30" width="20px" height="20px">
+                                                    <path d="M6 8v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8H6zM24 4h-6c0-.6-.4-1-1-1h-4c-.6 0-1 .4-1 1H6C5.4 4 5 4.4 5 5s.4 1 1 1h18c.6 0 1-.4 1-1S24.6 4 24 4z"/>
+                                                </svg>
+                                            </button>
+                                        </form>
+                                        <div class="row-info id">{{placa}}</div>
+                                        <div class="row-info">{{modelo}}</div>
+                                        <div class="row-info">{{capacidade}}</div>
+                                        <div class="row-info">{{status}}</div>
+                                        <div class="edit">
+                                            <svg viewBox="0 0 30 30" width="20px" height="20px"> 
+                                                <path d="M 22.828125 3 C 22.316375 3 21.804562 3.1954375 21.414062 3.5859375 L 19 6 L 24 11 L 26.414062 8.5859375 C 27.195062 7.8049375 27.195062 6.5388125 26.414062 5.7578125 L 24.242188 3.5859375 C 23.851688 3.1954375 23.339875 3 22.828125 3 z M 17 8 L 5.2597656 19.740234 C 5.2597656 19.740234 6.1775313 19.658 6.5195312 20 C 6.8615312 20.342 6.58 22.58 7 23 C 7.42 23.42 9.6438906 23.124359 9.9628906 23.443359 C 10.281891 23.762359 10.259766 24.740234 10.259766 24.740234 L 22 13 L 17 8 z M 4 23 L 3.0566406 25.671875 A 1 1 0 0 0 3 26 A 1 1 0 0 0 4 27 A 1 1 0 0 0 4.328125 26.943359 A 1 1 0 0 0 4.3378906 26.939453 L 4.3632812 26.931641 A 1 1 0 0 0 4.3691406 26.927734 L 7 26 L 5.5 24.5 L 4 23 z"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </li>
+                            {{/garagem}}
+                        </ul>
+                    </div>
+                </div>
+                <div class="button-add">Add</div>
+            </div>
+            <div class="section-area">   
+                <div class="section-header">
+                    <div class="logo-header"></div>
+                    <h1 class="title-header">Adicionar - Transporte</h1>
+                </div>
+                <div class="add-area">
+                    <form class="add-form" method="post">
+                        <input type="text" name="placa" placeholder="Placa" maxlength="7"/>
+                        <input type="text" name="modelo" placeholder="Modelo"/>
+                        <input type="text" name="capacidade" placeholder="Capacidade"/>
+                        <select name="status">
+                            <option value="Disponivel">Disponivel</option>
+                            <option value="Manutenção">Manutenção</option>
+                            <option value="Em uso">Em uso</option>
+                        </select>
+                        <button class="button-add" type="submit">Adicionar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="section-area">   
+                <div class="section-header">
+                    <div class="logo-header"></div>
+                    <h1 class="title-header">Adicionar - Pedidos</h1>
+                </div>
+                <div class="add-area">
+                    <form class="add-form" method="post">
+                        <input type="text" name="origem" placeholder="Origem"/>
+                        <input type="text" name="destino" placeholder="Destino"/>
+                        <input type="text" name="carregamento" placeholder="Carregamento"/>
+                        <select class="select-pedidos" name="cliente">
+                            {{#clientes}}
+                                <option value="{{nome}}">{{nome}}</option>
+                            {{/clientes}}
+                        </select>
+                        <select class="select-pedidos" name="motorista">
+                            {{#motoristas}}
+                                <option value="{{nome}}">{{nome}}</option>
+                            {{/motoristas}}
+                        </select>
+                        <select class="select-pedidos" name="status">
+                            <option value="Em andamento">Em andamento</option>
+                            <option value="Aguardando ser aprovado">Aguardando ser aprovado</option>
+                        </select>
+                        <button class="button-add" type="submit">Adicionar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="section-area">   
+                <div class="section-header">
+                    <div class="logo-header"></div>
+                    <h1 class="title-header">Adicionar - Clientes</h1>
+                </div>
+                <div class="add-area">
+                    <form class="add-form" method="post">
+                        <input type="text" name="nome" placeholder="Nome"/>
+                        <input type="text" name="cnpj" placeholder="Cnpj" />
+                        <input type="text" name="cep" placeholder="Cep" maxlength="9"/>
+                        <input type="text" name="logradouro" placeholder="Logradouro" maxlength="5"/>
+                        <input type="text" name="setor" placeholder="Setor" />
+                        <input type="text" name="numero" placeholder="Numero" maxlength="14"/>
+                        <input type="text" name="email" placeholder="Email" />
+                        <button class="button-add" type="submit">Adicionar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="section-area active-section">   
+                <div class="section-header">
+                    <div class="logo-header"></div>
+                    <h1 class="title-header">DashBoard</h1>
+                </div>
+                <div class="section-body">
+{{!                     <div class="left-side"></div>
+                    <div class="right-side"></div> }}
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

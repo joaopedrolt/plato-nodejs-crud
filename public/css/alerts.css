@@ -1,0 +1,21 @@
+.done{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #abfde6;
+    color: #219087;
+    font-weight: bold;
+}
+.erro{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #f8dcdc;
+    color: #bb7c78;
+    font-weight: bold;
+}
+.display{
+    display: flex;
+}

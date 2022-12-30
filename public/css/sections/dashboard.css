@@ -1,0 +1,12 @@
+.section-body{
+    height: 100%;
+    display: flex;
+}
+.left-side{
+    flex: 1;
+    border-right: 1px solid #818080;
+}
+.right-side{
+    border-left: 1px solid #818080;
+    flex: 1;
+}
