@@ -7,7 +7,7 @@
 - Proposito: Projeto crud para disciplina de laboratório de engenharia de software (Fatec).
 - Progresso: Parcialmente completo.
 - Tecnologias utilizadas: HTML, CSS, JavaScript, NodeJS, Typescript, ExpressJS, MustacheJS, SQL Server e Sequelize.
-- Requisitos: NodeJS e Sql Server.
+- Requisitos: NodeJS, TypeScript e Sql Server.
 - Adendos: Projeto super simples, sem intuito de ser profissional, feito apenas para prática dos recursos das tecnologias acima.
 
 <h3 align="center">Utilização</h3>
@@ -25,7 +25,7 @@
 - Clonar ou fazer download do projeto.
 - Comando "npm install" no diretório do projeto.
 - Configurar banco de dados de acordo com o modelo da sessão abaixo.
-- Configurar as variáveis de ambiente no arquivo .env seguindo o padrão não modificar caso queira usar o server já configurado (possibilidade de estar indisponível).
+- Configurar as variáveis de ambiente no arquivo .env seguindo o padrão.
 - Inserir pelo menos um usuário na tabela "users" tendo o valor da coluna "accesslevel" inserido como 1.
 - Comando "npm run start" no diretório do projeto.
 
